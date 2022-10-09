@@ -16,3 +16,5 @@ Folder 'larger_dataset':
 - unique_users_all.csv: all unique users (id, username, name, location)
 - users_with_locations.csv: those unique users whose location field has some content
 
+Folder 'tools':
+- sadness_lexicon.txt: lemmas of words indicating sadness, extractred from [NRC Emotion Lexicon](http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm). (Saif Mohammad and Peter Turney. 'Crowdsourcing a Word-Emotion Association Lexicon'. Computational Intelligence, 29(3): 436-465, 2013. Wiley Blackwell Publishing Ltd. Saif Mohammad and Peter Turney. 'Emotions Evoked by Common Words and Phrases: Using Mechanical Turk to Create an Emotion Lexicon.' In Proceedings of the NAACL-HLT 2010 Workshop on Computational Approaches to Analysis and Generation of Emotion in Text, June 2010, LA, California.)
