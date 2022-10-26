@@ -18,11 +18,14 @@ Folder 'larger_dataset':
 - users_with_locations.csv: those unique users whose location field has some content
 - tweets_with_locations.csv: english tweets and tweeters' locations in one table
 - tweets_with_coordinates.csv: joined location diteils from users (file ../user_locations.csv)
+- tweets_with_coordinates_and_sentiments.csv: as above, but added sentiment probabilities using pysentimento (file tools/predict_sentiment.py)
+- word_freq.csv: unique, lemmatized, lowercase words in tweets_with_coordinates.csv and their frequencies (made with file tools/word_frequency.py)
 
 Folder 'tools':
 - sadness_lexicon.txt: lemmas of words indicating sadness, extracted from [NRC Emotion Lexicon](http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm). (Saif Mohammad and Peter Turney. 'Crowdsourcing a Word-Emotion Association Lexicon'. <i>Computational Intelligence</i>, 29(3): 436-465, 2013. Wiley Blackwell Publishing Ltd.) (Saif Mohammad and Peter Turney. 'Emotions Evoked by Common Words and Phrases: Using Mechanical Turk to Create an Emotion Lexicon.' <i>In Proceedings of the NAACL-HLT 2010 Workshop on Computational Approaches to Analysis and Generation of Emotion in Text</i>, June 2010, LA, California.)
 - predict_sentiment.py: code for sentiment prediction with [pysentimento](https://github.com/pysentimiento/pysentimiento). Citation: Juan Manuel Pérez and Juan Carlos Giudici and Franco Luque, 'pysentimiento: A Python Toolkit for Sentiment Analysis and SocialNLP tasks', 2021, 
 https://doi.org/10.48550/arXiv.2106.09462
+- word_frequency.py: code for counting word frequencies with [nltk tools](https://www.nltk.org/)
 
 
 Folder 'geonames':
