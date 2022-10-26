@@ -3,7 +3,7 @@ from pysentimiento.preprocessing import preprocess_tweet
 import pandas as pd
 
 # Path to csv file containing tweets. File must have headers 'id', 'location', 'tweet' 
-filepath = 'fake_test.csv'
+filepath = 'tweets_with_coordinates.csv'
 
 # Read, drop empty lines and duplicates and preprocess the tweets
 data = pd.read_csv(filepath, sep=',')
@@ -36,4 +36,4 @@ def sentiments_to_columns(df):
 df = sentiments_to_columns(df)
 
 # Save dataframe to a csv file
-df.to_csv('fake_test_tweets_with_sentiments.csv', sep=',')
+df.to_csv('tweets_with_coordinations_and_sentiments.csv', sep=',')
