@@ -20,13 +20,15 @@ Folder 'larger_dataset':
 - tweets_with_coordinates.csv: joined location diteils from users (file ../user_locations.csv)
 - tweets_with_coordinates_and_sentiments.csv: as above, but added sentiment probabilities using pysentimento (file tools/predict_sentiment.py)
 - word_freq.csv: unique, lemmatized, lowercase words in tweets_with_coordinates.csv and their frequencies (made with file tools/word_frequency.py)
+- medians_for_sentiments.png (made with file tools/analyze_sentiments.py)
+- boxplot_sad_others.png (made with file tools/analyze_sentiments.py)
 
 Folder 'tools':
 - sadness_lexicon.txt: lemmas of words indicating sadness, extracted from [NRC Emotion Lexicon](http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm). (Saif Mohammad and Peter Turney. 'Crowdsourcing a Word-Emotion Association Lexicon'. <i>Computational Intelligence</i>, 29(3): 436-465, 2013. Wiley Blackwell Publishing Ltd.) (Saif Mohammad and Peter Turney. 'Emotions Evoked by Common Words and Phrases: Using Mechanical Turk to Create an Emotion Lexicon.' <i>In Proceedings of the NAACL-HLT 2010 Workshop on Computational Approaches to Analysis and Generation of Emotion in Text</i>, June 2010, LA, California.)
 - predict_sentiment.py: code for sentiment prediction with [pysentimento](https://github.com/pysentimiento/pysentimiento). Citation: Juan Manuel Pérez and Juan Carlos Giudici and Franco Luque, 'pysentimiento: A Python Toolkit for Sentiment Analysis and SocialNLP tasks', 2021, 
 https://doi.org/10.48550/arXiv.2106.09462
 - word_frequency.py: code for counting word frequencies with [nltk tools](https://www.nltk.org/)
-
+- analyze_sentiments.py: statistics and visualizations about the predicted sentiments 
 
 Folder 'geonames':
 - cities15000.txt: all cities such that their population is > 15000 + capitals (in case they are smaller than that). Source: [GeoNames Gazetteer files](http://download.geonames.org/export/dump/). Reeleased under a [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/).

@@ -34,3 +34,12 @@ print(np.std(sad))
 print(np.mean(oth))
 print(np.mean(sad))
 
+# Plot tweets to wordmap with sadness 
+import plotly.express as px
+
+df['long'] = df['long'].apply(lambda x: str(x).split()[1])
+df['lat'] = df['lat'].apply(lambda x: str(x).split()[1])
+
+fig = px.scatter_geo(df,lat='lat',lon='long', hover_name='tweet', color='anger')
+fig.update_layout(title = 'Tweets reacting to the passing of Queen Elizabeth II', title_x=0.5)
+fig.show()
