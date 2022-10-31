@@ -15,16 +15,19 @@ Only a small fraction of twiits include location information. So that we could c
 
 The location information of user profiles is a free text field. In practise, the location string could be anything from the obvious "London, UK" to the location-impossible "Universum". There were also variations of the spelling of places; for example there could be "United States", "USA", "U.S." or "U.S.A.".
 
-We wanted to connect freely provided location information with latitude and longitude coordinates. For that, we merged geonames sets of countries, states of USA and all cities with a population larger than 15000. 
+We wanted to connect freely provided location information with latitude and longitude coordinates. For that, we merged geonames sets of countries, states of USA and all cities with a population larger than 15000. The total geoname set has also aliases and abbreviations, so we could get same places despite the spelling variations.
 
-We compared the location information string of the user profiles with set of geonames: first comparing with countries, then with subcountries (like a state), then with cities and last with approviations and aliases. 
+We compared the location information string of the user profiles with set of geonames: first comparing with countries, then with subcountries (like a state), then with cities and last with approviations and aliases. We selected users whose location info we could identify, and used their twiits.
+
+There may be errors in identified locations, because we only compare strings with each other. For example, short words could correspond to the abbreviation of some place.
+
+Some users are provided their location with emoji flags. We just use alphanumeric values, but by using also unicode-emoji-characters, we could have localized more users.
 
 ## Github storage
 Problems with large datafiles...
 
 ## Sentiment analysis
-<<<<<<< HEAD
-For sentiment analysis we planned to use pre-existing lists of words describing positive and negative sentiments and some python library, that would calulate the sentiment possibilities for each tweet. We found good tools for this, but quickly realised, that dividing tweets into positive and negative categories wouldn't work for our task, since word lists (and  machine learning algorithims) tend to categorise words associated with death as highly neagtive. Naturally, great deal of our data set contained words such as ‘died’, ‘death’, ‘passing’, although the tweets themselves were neutral or even sympathetic in tone. Simply turning the interpretation of positive to negative and negative to positve would also not have worked, since sentence like ‘The Queen died today’ and ’The Queen was bad’ would still gain roughly the same sentiment scores. \
+For sentiment analysis we planned to use pre-existing lists of words describing positive and negative sentiments and some python library, that would calculate the sentiment possibilities for each tweet. We found good tools for this, but quickly realised, that dividing tweets into positive and negative categories wouldn't work for our task, since word lists (and  machine learning algorithims) tend to categorise words associated with death as highly neagtive. Naturally, great deal of our data set contained words such as ‘died’, ‘death’, ‘passing’, although the tweets themselves were neutral or even sympathetic in tone. Simply turning the interpretation of positive to negative and negative to positive would also not have worked, since sentence like ‘The Queen died today’ and ’The Queen was bad’ would still gain roughly the same sentiment scores. \
 We decided to use more detailed approch to study the emotions behind the tweets. We used pysentimento library to calculate probabilites for five emotions and category ‘others’, that covers uncertain emotions. Not-suprisingly sadness and others were the most common emotions, although the standard deviation within the emotiongroups was high.\
 It would be interesting to analyse the emotions by finding most common phrases with n-grams. In this way we could eliminate some common phrases such as ‘we are saddened’ and ‘rest in peace’, and gain more detailed view of the opinions expressed in tweets. Unfortunately constructing these kind of n-grams proved to be to laborous for this project.
 ## Data visualization
@@ -34,6 +37,6 @@ Because pysentimento library provaided us with probabilities for different emoti
 The project was a great way to learn about many different aspects of data science.....
 ... 
 One of the most suprising realizations was, that collecting and manipulating data to a form suitable for an analysis was such a challengin task. This ate up more time than we anticipated, so we could not focus on the natural language prosessing aspect of the project as much as we originally intented to.\
-We used python with pandas library and data manipulation became quite familiar during the project. We also had to study the use of many different python libararies and tecnologies (pyplot Chart Studio and pyplot express, geopandas, pysntimento, hugginface...), although we didn't end up using all of them. We learned some basic aspects of natural language processing, such as problems with sentiment analyses and what they actually can tell about a text. The importance of preprocessing the data properly also became apparent, when we calculted some wordfrequencies (which didn't end up in the final product).\
+We used python with pandas library and data manipulation became quite familiar during the project. We also had to study the use of many different python libraries and tecnologies (pyplot Chart Studio and pyplot express, geopandas, pysntimento, hugginface...), although we didn't end up using all of them. We learned some basic aspects of natural language processing, such as problems with sentiment analyses and what they actually can tell about a text. The importance of preprocessing the data properly also became apparent, when we calculated some wordfrequencies (which didn't end up in the final product).\
 Large datafiles prooved to be tricky to handle both in storeging and in visualization.  
 ## Final words?
