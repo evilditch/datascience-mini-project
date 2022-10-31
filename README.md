@@ -26,10 +26,11 @@ python scripts:
 https://doi.org/10.48550/arXiv.2106.09462)
 - create_cat_location.py': create a new column for categorical location data, and unnecessary columns are dropped. New dataframe is saved in file 'tweets_with_emotions_and_cat_loc.csv'. This dataframe is used to analyze the emotions.
 - analyze_data.py: do visualizations and calculate statistics from data in 'tweets_with_emotions_and_cat_loc.csv'. Show sadness scores in map, calculate [medians for all emotions in tweets](https://github.com/evilditch/datascience-mini-project/blob/main/larger_dataset/median_bar.png), create boxplot for [sadness](https://github.com/evilditch/datascience-mini-project/blob/main/larger_dataset/sadness_box.png) and [others](https://github.com/evilditch/datascience-mini-project/blob/main/larger_dataset/others_box.png) in different categorical locations.
+- create_maps.py: create [map](https://github.com/evilditch/datascience-mini-project/blob/main/larger_dataset/world_sadness.png) of sadness propabilites of all tweets.
 
 
 ### Folder 'tools':
 - word_frequency.py: code for counting word frequencies with [nltk tools](https://www.nltk.org/)
 
-Folder 'geonames':
+### Folder 'geonames':
 - cities15000.txt: all cities such that their population is > 15000 + capitals (in case they are smaller than that). Source: [GeoNames Gazetteer files](http://download.geonames.org/export/dump/). Reeleased under a [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/).
